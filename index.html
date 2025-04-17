@@ -1,0 +1,92 @@
+<html>
+
+<!--TEXT and Style-->
+    <head>
+        <title>WEBSITE</title>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+
+<!--Defining the switchImage function for onclick, also including a time element-->
+
+            <script>
+                function switchImage(imgElement, pressedSrc, defaultSrc, duration) {
+                    imgElement.src = pressedSrc;
+                    setTimeout(() => {
+                        imgElement.src = defaultSrc;
+                    }, duration);
+                }
+            </script>
+        
+                <style>
+                    .row{
+                        width:720px;
+                        margin: 10px auto 10px auto ;
+                        }
+                    .image-container {
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding:20px;
+                        }
+
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: linear-gradient(rgb(163, 84, 84), rgb(8, 5, 84))
+}  
+                </style>
+    </head>
+
+    <!--body style="background-color: rgb(255, 192, 137);"-->
+
+        <div class="row">
+            <div class="image-container"><img id= img1 src="img/Icon1.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon1-1.png', 'img/Icon1.png', 5000)" 
+                /></div>
+            <div class="image-container"><img id= img2 src="img/Icon2.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon2-2.png', 'img/Icon2.png', 1000)"  
+                /></div>
+            <div class="image-container"><img id= img3 src="img/Icon3.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon3-3.png', 'img/Icon3.png', 4000)" 
+                /></div>
+        </div>
+
+        <div class="row">
+            <div class="image-container"><img id= img4 src="img/Icon4.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon4-4.png', 'img/Icon4.png', 5500)" 
+                /></div>
+            <div class="image-container"><img id= img5 src="img/Icon5.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon5-5.png', 'img/Icon5.png', 900)" 
+                /></div>
+            <div class="image-container"><img id= img6 src="img/Icon6.png" height="200" width="200"
+                onclick="switchImage(this, 'img/Icon6-6.png', 'img/Icon6.png', 4400)" 
+                /></div>
+        </div>
+
+        <script>
+            var sound1 = new buzz.sound("sound/nature1.mp3");
+            var sound2 = new buzz.sound("sound/dading1.mp3");
+            var sound3 = new buzz.sound("sound/ticktock1.mp3");
+            var sound4 = new buzz.sound("sound/winner2.mp3");
+            var sound5 = new buzz.sound("sound/pop1.mp3");
+            var sound6 = new buzz.sound("sound/weight2.mp3");
+            var sound7 = new buzz.sound("sound/chaching1.mp3");
+            var sound8 = new buzz.sound("sound/complete3.mp3");
+            var sound9 = new buzz.sound("sound/heal5.mp3");
+
+            window.onload = function() {
+                document.getElementById('img1').addEventListener('click', function () {sound1.play(); });  
+                document.getElementById('img2').addEventListener('click', function () {sound2.play(); });
+                document.getElementById('img3').addEventListener('click', function () {sound3.play(); });
+                document.getElementById('img4').addEventListener('click', function () {sound4.play(); });
+                document.getElementById('img5').addEventListener('click', function () {sound5.play(); }); 
+                document.getElementById('img6').addEventListener('click', function () {sound6.play(); }); 
+                document.getElementById('img7').addEventListener('click', function () {sound7.play(); }); 
+                document.getElementById('img8').addEventListener('click', function () {sound8.play(); }); 
+                document.getElementById('img9').addEventListener('click', function () {sound9.play(); });
+            };  
+        </script>  
+
+    </body>
+
+</html>
